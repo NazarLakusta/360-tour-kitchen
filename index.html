@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Презентація Інтер'єру | 360 Tour</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="plan-view" class="active">
+        <div class="plan-header">
+            <h1>Оберіть кімнату</h1>
+            <p>Натисніть на точку, щоб перейти у 360 панораму</p>
+        </div>
+        
+        <div class="plan-container">
+            <img src="img/topview.webp" alt="План квартири" class="plan-image">
+            
+            <button class="plan-hotspot" style="top: 65%; left: 27%;" data-room="livingRoom">
+                <span class="hotspot-pulse"></span>
+                <span class="hotspot-label">Вітальня</span>
+            </button>
+            
+            <button class="plan-hotspot" style="top: 40%; left: 50%;" data-room="kitchen">
+                <span class="hotspot-pulse"></span>
+                <span class="hotspot-label">Кухня</span>
+            </button>
+
+            <button class="plan-hotspot" style="top: 70%; left: 50%;" data-room="hallway">
+                <span class="hotspot-pulse"></span>
+                <span class="hotspot-label">Прихожа</span>
+            </button>
+
+            <button class="plan-hotspot" style="top: 70%; left: 75%;" data-room="bedroom">
+                <span class="hotspot-pulse"></span>
+                <span class="hotspot-label">Спальна</span>
+            </button>
+
+            <button class="plan-hotspot" style="top: 32%; left: 20%;" data-room="bath">
+                <span class="hotspot-pulse"></span>
+                <span class="hotspot-label">Ванна</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="tour-view">
+        <div id="panorama"></div>
+        
+        <div class="tour-ui">
+            <button id="btn-back" class="ui-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                <span>На карту</span>
+            </button>
+            
+            <h2 id="current-room-title">Вітальня</h2>
+            
+            <button id="btn-gallery" class="ui-btn primary">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Фото кімнати</span>
+            </button>
+        </div>
+    </section>
+
+    <div style="display: none;">
+        <!-- Living room -->
+        <a data-fancybox="gallery-livingRoom" href="img/living/9.webp"></a>
+        <a data-fancybox="gallery-livingRoom" href="img/living/10.webp"></a>
+        <a data-fancybox="gallery-livingRoom" href="img/living/14.webp"></a>
+        <a data-fancybox="gallery-livingRoom" href="img/living/12.webp"></a>
+        <a data-fancybox="gallery-livingRoom" href="img/living/13.webp"></a>
+        
+        <a data-fancybox="gallery-hallway" href="img/hallway/3.webp"></a>
+        <a data-fancybox="gallery-hallway" href="img/hallway/4.webp"></a>
+        <a data-fancybox="gallery-hallway" href="img/hallway/5.webp"></a>
+        <a data-fancybox="gallery-hallway" href="img/hallway/6.webp"></a>
+
+        <a data-fancybox="gallery-bath" href="img/bath/15.webp"></a>
+        <a data-fancybox="gallery-bath" href="img/bath/16.webp"></a>
+        <a data-fancybox="gallery-bath" href="img/bath/17.webp"></a>
+        <a data-fancybox="gallery-bath" href="img/bath/18.webp"></a>
+        <a data-fancybox="gallery-bath" href="img/bath/19.webp"></a>
+        <a data-fancybox="gallery-bath" href="img/bath/20.webp"></a>
+
+        <a data-fancybox="gallery-bed" href="img/bed/60000.webp"></a>
+        <a data-fancybox="gallery-bed" href="img/bed/70000.webp"></a>
+
+
+        <a data-fancybox="gallery-kitchen" href="img/kitchen/1.webp"></a>
+        <a data-fancybox="gallery-kitchen" href="img/kitchen/2.webp"></a>
+        <a data-fancybox="gallery-kitchen" href="img/kitchen/7.webp"></a>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
